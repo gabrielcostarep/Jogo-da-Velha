@@ -1,0 +1,75 @@
+:root {
+    --mainColor: #14BDAC;
+    --lineColor: #0DA192;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--mainColor);
+    text-align: center;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+#choice label {
+    cursor: pointer;
+}
+
+label img {
+    width: 50px;
+    margin: 50px 30px 0 30px;
+    padding: 5px;
+    border: 1px solid var(--lineColor);
+    border-radius: 5px;
+}
+
+#xPush:checked ~ #x img {
+    opacity: 0.6;
+}
+
+#oPush:checked ~ #o img {
+    opacity: 0.6;
+}
+
+#board {
+    margin-top: 60px;
+}
+
+.square {
+    width: 100px;
+    height: 100px;
+    display: inline-block;
+    margin: -5px 0;
+    cursor: pointer;
+}
+
+.square img{
+    width: 95px;
+}
+
+.verticalLine{
+    width: 10px;
+    height: 315px;
+    background-color: var(--lineColor);
+    border-radius: 10px;
+    display: inline-block;
+    position: absolute;
+    transform: translateX(-65%);
+}
+
+.horizontalLine {
+    width: 315px;
+    height: 10px;
+    background-color: var(--lineColor);
+    border-radius: 10px;
+    margin: 0 -10px 2px -10px;
+    display: inline-block;
+}
